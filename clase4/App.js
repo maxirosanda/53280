@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {View,StyleSheet ,Dimensions} from 'react-native'
+import {View,StyleSheet ,Dimensions ,Keyboard} from 'react-native'
 import uuid from 'react-native-uuid'
 import ModalDeleteTask from './src/components/ModalDeleteTask'
 import AddTask from './src/components/AddTask'
@@ -13,6 +13,7 @@ const App = () => {
   const [taskDescripcion,setTaskDescription] = useState("")
   const [tasks,setTasks] = useState([])
   const screenWidth = Dimensions.get('window').width
+
   const addTask = () =>{
 
     const newTask = {
@@ -27,6 +28,7 @@ const App = () => {
     setTasks([...tasks,newTask])
     setTaskTitle("")
     setTaskDescription("")
+    Keyboard.dismiss()
   }
 
   const onHandlerTitle = (t) =>{

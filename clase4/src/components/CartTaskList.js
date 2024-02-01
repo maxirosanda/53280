@@ -4,7 +4,7 @@ import ButtonPrimary from './ButtonPrimary'
 
 const CartTaskList = ({item,onHandlerModaDelete,screenWidth,updateTaskCompleted}) => {
   return (
-            <View style={[styles.taskCard,{width:screenWidth -60}]}>
+            <View style={[styles.taskCard,{width:screenWidth -60,}]}>
                 <Text style={styles.text}>Creacion: {item.createAt}</Text>
                 <Text style={styles.text}>Actuliazacion: {item.updateAt}</Text>
                 <Text style={styles.text}>Titulo: {item.title}</Text>

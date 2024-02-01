@@ -1,4 +1,4 @@
-import { StyleSheet, TextInput, View,Button } from 'react-native'
+import { StyleSheet, TextInput, View } from 'react-native'
 import ButtonPrimary from './ButtonPrimary'
 
 const AddTask = ({taskTitle,
