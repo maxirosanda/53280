@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View,Image } from 'react-native'
+import { StyleSheet, Text, View,Image, Pressable } from 'react-native'
 import React from 'react'
 import colors from '../utils/globals/colors'
 import fonts from '../utils/globals/fonts'
 
-const ProductByCategory = ({item}) => {
+const ProductByCategory = ({item ,selectedProductId}) => {
   return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={{uri:item.thumbnail}} resizeMode="cover"/>
+    <Pressable onPress={()=>selectedProductId(item.id)} style={styles.container}>
       <Text style={styles.text}>{item.id} {item.title}</Text>
-    </View>
+      <Image style={styles.image} source={{uri:item.thumbnail}} resizeMode="cover"/>
+    </Pressable>
   )
 }
 
@@ -32,8 +32,8 @@ const styles = StyleSheet.create({
         fontFamily:fonts.PlayfairDisplaySCRegular
     },
     image:{
-        width:90,
-        height:90,
+        minWidth:90,
+        minHeight:90,
         borderRadius:5
     }
 })
