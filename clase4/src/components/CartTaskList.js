@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View,Switch} from 'react-native'
 import React from 'react'
 import ButtonPrimary from './ButtonPrimary'
+import fonts from '../utils/globals/fonts'
 
-const CartTaskList = ({item,onHandlerModaDelete,screenWidth,updateTaskCompleted}) => {
+const CartTaskList = ({item,onHandlerModaDelete,screenWidth,updateTaskCompleted,handlerTaskUpdateSelected}) => {
+
   return (
-            <View style={[styles.taskCard,{width:screenWidth -60,}]}>
+            <View style={[styles.taskCard,{width:screenWidth -40,}]}>
                 <Text style={styles.text}>Creacion: {item.createAt}</Text>
                 <Text style={styles.text}>Actuliazacion: {item.updateAt}</Text>
                 <Text style={styles.text}>Titulo: {item.title}</Text>
@@ -16,7 +18,8 @@ const CartTaskList = ({item,onHandlerModaDelete,screenWidth,updateTaskCompleted}
                     />
                     <Text style={styles.textCompleted}>{item.completed ? "Completada" : "Pendiente" }</Text>
                 </View>
-                <ButtonPrimary title='DEL' onPress={() => onHandlerModaDelete(item)} />
+                <ButtonPrimary title='Borrar' onPress={() => onHandlerModaDelete(item)} />
+                <ButtonPrimary title='Actualizar' onPress={() => handlerTaskUpdateSelected(item)} />
             </View>
   )
 }
@@ -36,7 +39,8 @@ const styles = StyleSheet.create({
       text:{
         width:"100%",
         color:"white",
-        fontSize:18
+        fontSize:18,
+        fontFamily:fonts.ProtestGuerrillaRegular
       },
       completedContanier:{
         width:"100%",

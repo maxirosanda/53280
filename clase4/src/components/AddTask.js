@@ -1,5 +1,6 @@
 import { StyleSheet, TextInput, View } from 'react-native'
 import ButtonPrimary from './ButtonPrimary'
+import fonts from '../utils/globals/fonts'
 
 const AddTask = ({taskTitle,
                   onHandlerTitle,
@@ -50,7 +51,8 @@ const styles = StyleSheet.create({
         borderRadius:5,
         color:"white",
         fontSize:16,
-        textAlignVertical:"top"
+        textAlignVertical:"top",
+        fontFamily:fonts.ProtestGuerrillaRegular
         
       }
 

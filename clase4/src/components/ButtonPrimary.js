@@ -1,4 +1,5 @@
 import { Pressable, StyleSheet, Text} from 'react-native'
+import fonts from '../utils/globals/fonts'
 
 const ButtonPrimary = ({title,onPress}) => {
   return (
@@ -20,6 +21,7 @@ const styles = StyleSheet.create({
         borderRadius:5
     },
     text:{
-        fontSize:16
+        fontSize:16,
+        fontFamily:fonts.ProtestGuerrillaRegular
     }
 })

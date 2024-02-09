@@ -1,9 +1,13 @@
 import { useState } from 'react'
-import {View,StyleSheet ,Dimensions ,Keyboard} from 'react-native'
+import {View,StyleSheet ,Dimensions ,Keyboard,SafeAreaView,Text} from 'react-native'
 import uuid from 'react-native-uuid'
-import ModalDeleteTask from './src/components/ModalDeleteTask'
-import AddTask from './src/components/AddTask'
-import ListTasks from './src/components/ListTasks'
+
+import {useFonts} from 'expo-font'
+import { fontsCollection } from './src/utils/globals/fonts'
+import { StatusBar } from 'expo-status-bar'
+import colors from './src/utils/globals/colors'
+import Home from './src/screens/Home'
+import Update from './src/screens/Update'
 
 const App = () => {
 
@@ -12,7 +16,13 @@ const App = () => {
   const [taskTitle,setTaskTitle] = useState("")
   const [taskDescripcion,setTaskDescription] = useState("")
   const [tasks,setTasks] = useState([])
+  const [taskUpdateSelected,setTaskUpdateSelected] = useState({})
   const screenWidth = Dimensions.get('window').width
+  const [fontsLoaded] = useFonts(fontsCollection)
+
+  if (!fontsLoaded) {
+    return null
+  }
 
   const addTask = () =>{
 
@@ -31,6 +41,17 @@ const App = () => {
     Keyboard.dismiss()
   }
 
+  const updateTask = (taskSelected) => {
+    setTasks(tasks.map(task => {
+
+      if(task.id === taskSelected.id){
+        return taskSelected
+      }
+      return task
+    }))
+    setTaskUpdateSelected({})
+  }
+
   const onHandlerTitle = (t) =>{
     setTaskTitle(t)
   }
@@ -42,6 +63,9 @@ const App = () => {
   const onHandlerModaDelete = (task) => {
     setTaskSelected(task)
     setModalVisible(!modalVisible)
+  }
+  const handlerTaskUpdateSelected = (task) => {
+    setTaskUpdateSelected(task)
   }
 
   const deleteTask = () => {
@@ -55,28 +79,41 @@ const App = () => {
       return task
     }))
   }
+  const goBack = () => {
+    setTaskUpdateSelected({})
+  }
 
   return( 
-    <View style={styles.container} >
-      <AddTask taskTitle= {taskTitle}
-               onHandlerTitle= {onHandlerTitle}
-               taskDescripcion = {taskDescripcion}
-               onHandlerDescription = {onHandlerDescription}
-               addTask = {addTask}
-      />
-      <ListTasks 
-        tasks={tasks} 
-        onHandlerModaDelete={onHandlerModaDelete}
-        screenWidth={screenWidth}
-        updateTaskCompleted={updateTaskCompleted}
-      />
-      <ModalDeleteTask  
-         modalVisible={modalVisible}
-         taskSelected={taskSelected}
-         deleteTask={deleteTask}
-         onHandlerModaDelete={onHandlerModaDelete}
-      />
-  </View>
+    <>
+      <StatusBar backgroundColor={colors.primary} style='light'/>
+      <SafeAreaView style={styles.container} >
+        {taskUpdateSelected.title ?
+          <Update
+            taskUpdateSelected={taskUpdateSelected}
+            updateTask={updateTask}
+            goBack={goBack}
+            
+          />
+        :
+          <Home
+          tasks={tasks}
+          taskTitle ={taskTitle}
+          taskDescripcion={taskDescripcion}
+          onHandlerTitle = {onHandlerTitle}
+          onHandlerDescription = { onHandlerDescription}
+          addTask={addTask}
+          onHandlerModaDelete = {onHandlerModaDelete}
+          screenWidth={screenWidth}
+          updateTaskCompleted={updateTaskCompleted}
+          handlerTaskUpdateSelected={handlerTaskUpdateSelected}
+          modalVisible={modalVisible}
+          taskSelected={taskSelected}
+          deleteTask={deleteTask}
+    />
+        }
+       
+      </SafeAreaView>
+  </>
   )
 }
 
