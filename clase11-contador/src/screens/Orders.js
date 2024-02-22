@@ -4,11 +4,11 @@ import OrderItem from '../components/OrderItem'
 
 const Orders = () => {
   return (
-    <FlatList
-    data={orders}
-    keyExtractor={(item)=>item.id}
-    renderItem={({item})=> <OrderItem order={item}/>}
-    />
+      <FlatList
+      data={orders}
+      keyExtractor={(item)=>item.id}
+      renderItem={({item})=> <OrderItem order={item}/>}
+      />
   )
 }
 
