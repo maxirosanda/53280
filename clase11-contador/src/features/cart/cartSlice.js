@@ -23,11 +23,11 @@ export const cartSlice = createSlice({
                 })
             }
             
-            state.total = state.items.reduce((acc,item)=> acc = acc + item.price,0)
+            state.total = state.items.reduce((acc,item)=> acc = acc + (item.price * item.quantity),0)
         },
         deleteCartItem:(state,actions) =>{
             state.items = state.items.filter((item)=> item.id !== actions.payload)
-            state.total = state.items.reduce((acc,item)=> acc = acc + item.price,0)
+            state.total = state.items.reduce((acc,item)=> acc = acc + (item.price * item.quantity),0)
         }
     }
 })
