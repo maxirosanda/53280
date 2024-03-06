@@ -1,5 +1,4 @@
 import { StyleSheet, Text, View,Image,Pressable } from 'react-native'
-import { useEffect, useState } from 'react'
 import colors from '../utils/globals/colors'
 import { useDispatch } from 'react-redux'
 import { addCartItem } from '../features/cart/cartSlice'
