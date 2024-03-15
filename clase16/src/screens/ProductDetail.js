@@ -3,13 +3,18 @@ import colors from '../utils/globals/colors'
 import { useDispatch } from 'react-redux'
 import { addCartItem } from '../features/cart/cartSlice'
 import { useGetProductQuery } from '../app/services/shop'
+import LoadingSpinner from '../components/LoadingSpinner'
+import Error from '../components/Error'
+import EmptyListComponent from '../components/EmptyListComponent'
 
-const ProductDetail = ({route}) => {
+const ProductDetail = ({navigation,route}) => {
   const dispatch = useDispatch()
   const {productId} = route.params
-  const {data:product,isLoading} = useGetProductQuery(productId)
+  const {data:product,isLoading,isError,isSuccess} = useGetProductQuery(productId)
 
-  if(isLoading) return <View><Text>cargando...</Text></View>
+  if(isLoading) return <LoadingSpinner/>
+  if(isError) return <Error message="¡Ups! Algo salió mal." textButton="Volver" onRetry={()=>navigation.goBack()}/>
+  if(isSuccess && product === null) return <EmptyListComponent message="El producto no esta disponible"/>
 
   return (
     <View style={styles.container}>

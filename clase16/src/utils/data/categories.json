@@ -1,22 +1,14 @@
 [
-    "smartphones",
-    "laptops",
-    "fragrances",
-    "skincare",
-    "groceries",
-    "home-decoration",
-    "furniture",
-    "tops",
-    "womens-dresses",
-    "womens-shoes",
-    "mens-shirts",
-    "mens-shoes",
-    "mens-watches",
-    "womens-watches",
-    "womens-bags",
-    "womens-jewellery",
-    "sunglasses",
-    "automotive",
-    "motorcycle",
-    "lighting"
-  ]
+  {
+    "title":"Placas Base",
+    "thumbnail":"https://i.ibb.co/jrCr3TH/motherboard.jpg"
+  },
+  {
+    "title":"Memorias RAM",
+    "thumbnail":"https://i.ibb.co/MZzCqHV/memory-ram.webp"
+  },
+  {
+    "title":"Procesadores",
+    "thumbnail":"https://i.ibb.co/9NPkqqr/processors.jpg"
+  }
+]
