@@ -1,0 +1,144 @@
+[
+  {
+    "id": 0,
+    "title": "AMD Ryzen 9 5900X Processor",
+    "description": "12 cores, 24 threads, 70MB cache, 4.8GHz Max Boost",
+    "price": 549,
+    "discountPercentage": 10,
+    "rating": 4.9,
+    "stock": 50,
+    "brand": "AMD",
+    "category": "Procesadores",
+    "thumbnail": "https://i.ibb.co/thL7Tvs/core-i9-x-serie-2.jpg",
+    "images": [
+      "https://i.ibb.co/thL7Tvs/core-i9-x-serie-2.jpg"
+
+    ]
+  },
+  {
+    "id": 1,
+    "title": "ASUS ROG Strix B550-F Gaming Motherboard",
+    "description": "ATX, AMD AM4, PCIe 4.0, DDR4, 2.5Gb Ethernet, USB 3.2 Gen 2",
+    "price": 189,
+    "discountPercentage": 12,
+    "rating": 4.8,
+    "stock": 30,
+    "brand": "ASUS",
+    "category": "Placas Base",
+    "thumbnail": "https://i.dummyjson.com/data/products/102/thumbnail.jpg",
+    "images": [
+      "https://i.dummyjson.com/data/products/102/1.jpg",
+      "https://i.dummyjson.com/data/products/102/2.jpg",
+      "https://i.dummyjson.com/data/products/102/3.jpg",
+      "https://i.dummyjson.com/data/products/102/thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Corsair Vengeance RGB Pro 32GB (2x16GB) DDR4 3200MHz RAM",
+    "description": "High Performance Desktop Memory, RGB LED Lighting",
+    "price": 169,
+    "discountPercentage": 8,
+    "rating": 4.7,
+    "stock": 60,
+    "brand": "Corsair",
+    "category": "Memorias RAM",
+    "thumbnail": "https://i.dummyjson.com/data/products/103/thumbnail.jpg",
+    "images": [
+      "https://i.dummyjson.com/data/products/103/1.jpg",
+      "https://i.dummyjson.com/data/products/103/2.jpg",
+      "https://i.dummyjson.com/data/products/103/3.jpg",
+      "https://i.dummyjson.com/data/products/103/thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Intel Core i9-11900K Processor",
+    "description": "8 cores, 16 threads, up to 5.3 GHz, unlocked",
+    "price": 549,
+    "discountPercentage": 5,
+    "rating": 4.8,
+    "stock": 40,
+    "brand": "Intel",
+    "category": "Procesadores",
+    "thumbnail": "https://i.dummyjson.com/data/products/104/thumbnail.jpg",
+    "images": [
+      "https://i.dummyjson.com/data/products/104/1.jpg",
+      "https://i.dummyjson.com/data/products/104/2.jpg",
+      "https://i.dummyjson.com/data/products/104/3.jpg",
+      "https://i.dummyjson.com/data/products/104/thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "GIGABYTE Z590 AORUS MASTER Motherboard",
+    "description": "ATX, Intel LGA1200, DDR4, Triple M.2, PCIe 4.0, USB 3.2 Gen 2",
+    "price": 429,
+    "discountPercentage": 10,
+    "rating": 4.7,
+    "stock": 25,
+    "brand": "GIGABYTE",
+    "category": "Placas Base",
+    "thumbnail": "https://i.dummyjson.com/data/products/105/thumbnail.jpg",
+    "images": [
+      "https://i.dummyjson.com/data/products/105/1.jpg",
+      "https://i.dummyjson.com/data/products/105/2.jpg",
+      "https://i.dummyjson.com/data/products/105/3.jpg",
+      "https://i.dummyjson.com/data/products/105/thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Crucial Ballistix RGB 32GB (2x16GB) DDR4 3600MHz RAM",
+    "description": "Customizable RGB LED, high performance memory",
+    "price": 179,
+    "discountPercentage": 8,
+    "rating": 4.6,
+    "stock": 35,
+    "brand": "Crucial",
+    "category": "Memorias RAM",
+    "thumbnail": "https://i.dummyjson.com/data/products/106/thumbnail.jpg",
+    "images": [
+      "https://i.dummyjson.com/data/products/106/1.jpg",
+      "https://i.dummyjson.com/data/products/106/2.jpg",
+      "https://i.dummyjson.com/data/products/106/3.jpg",
+      "https://i.dummyjson.com/data/products/106/thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "AMD Ryzen 7 5800X Processor",
+    "description": "8 cores, 16 threads, 36MB cache, up to 4.7GHz Max Boost",
+    "price": 399,
+    "discountPercentage": 15,
+    "rating": 4.8,
+    "stock": 55,
+    "brand": "AMD",
+    "category": "Procesadores",
+    "thumbnail": "https://i.dummyjson.com/data/products/107/thumbnail.jpg",
+    "images": [
+      "https://i.dummyjson.com/data/products/107/1.jpg",
+      "https://i.dummyjson.com/data/products/107/2.jpg",
+      "https://i.dummyjson.com/data/products/107/3.jpg",
+      "https://i.dummyjson.com/data/products/107/thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "MSI MPG B550 Gaming Plus Motherboard",
+    "description": "ATX, AMD AM4, DDR4, PCIe 4.0, 2.5Gb Ethernet, USB 3.2 Gen 2",
+    "price": 149,
+    "discountPercentage": 10,
+    "rating": 4.5,
+    "stock": 20,
+    "brand": "MSI",
+    "category": "Placas Base",
+    "thumbnail": "https://i.dummyjson.com/data/products/107/thumbnail.jpg",
+    "images": [
+      "https://i.dummyjson.com/data/products/107/1.jpg",
+      "https://i.dummyjson.com/data/products/107/2.jpg",
+      "https://i.dummyjson.com/data/products/107/3.jpg",
+      "https://i.dummyjson.com/data/products/107/thumbnail.jpg"
+    ]
+  }
+]
