@@ -1,4 +1,4 @@
-import { StyleSheet} from 'react-native'
+import { StyleSheet,View,Image ,Text} from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import ShopStack from './ShopStack'
 import CartStack from './CartStack'
@@ -6,10 +6,16 @@ import OrdersStack from './OrdersStack'
 import TabBarIcon from '../components/TabBarIcon';
 import colors from '../utils/globals/colors'
 import ProfileStack from './ProfileStack'
+import { useGetImageQuery } from '../app/services/profile'
+import { useSelector } from 'react-redux'
 const Tab = createBottomTabNavigator()
 
+    
 
 const TabNavigator = () => {
+    const localId = useSelector(state => state.auth.localId)
+    const {data} = useGetImageQuery(localId)
+    
   return (
     <Tab.Navigator
                 initialRouteName='ShopStack'
@@ -49,7 +55,18 @@ const TabNavigator = () => {
                     name='ProfileStack' 
                     component={ProfileStack}
                     options={{
-                        tabBarIcon: ({focused}) => <TabBarIcon title="Perfil" nameIcon="user" focused={focused}/>
+                        tabBarIcon: ({focused}) => {
+                        if(data){
+                            return  <View>
+                                    <Image
+                                        source={{uri:data.image}}
+                                        style={styles.image}
+                                        resizeMode='cover' />
+                                    <Text>Perfil</Text>
+                                    </View>
+                        }
+                        return  <TabBarIcon title="Perfil" nameIcon="user" focused={focused}/>
+                    }
                     }}
             />
     </Tab.Navigator>
@@ -76,5 +93,9 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.23,
         shadowRadius: 2.62, 
-    }
+    },
+    image:{
+        width:25,
+        height:25
+    },
 })
